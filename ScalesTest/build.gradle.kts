@@ -1,5 +1,8 @@
+import org.gradle.jvm.toolchain.JavaLanguageVersion
+
 plugins {
-    kotlin("jvm") version "2.3.20"
+    kotlin("jvm") version "1.9.22"
+    java
     application
 }
 
@@ -16,12 +19,18 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+
 kotlin {
     jvmToolchain(17)
 }
 
 application {
-    mainClass.set("com.scalestest.MainKt")
+    mainClass.set("com.scalestest.MainJava")
 }
 
 tasks.test {
