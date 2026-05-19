@@ -17,5 +17,5 @@ kotlin {
 }
 
 application {
-    mainClass.set("org.example.physics.MainKt")
+    mainClass.set("fishscales.Main")
 }
