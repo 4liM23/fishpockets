@@ -2,8 +2,8 @@ import org.gradle.jvm.toolchain.JavaLanguageVersion
 
 plugins {
     kotlin("jvm") version "1.9.22"
-    java
-    application
+    id("application")
+    id("org.openjfx.javafxplugin") version "0.1.0"
 }
 
 group = "com.scalestest"
@@ -23,6 +23,11 @@ java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(17))
     }
+}
+
+javafx {
+    version = "17.0.8"
+    modules = listOf("javafx.controls")
 }
 
 kotlin {
