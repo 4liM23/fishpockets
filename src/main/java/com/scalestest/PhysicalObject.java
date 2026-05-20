@@ -1,19 +1,19 @@
 package com.scalestest;
 
-public abstract class PhysicalObeject {
+public abstract class PhysicalObject {
     private double mass;
     private double velocity;
     private double acceleration;
     private Position position; 
 
-    public PhysicalObeject(double mass, double velocity, double acceleration) {
+    public PhysicalObject(double mass, double velocity, double acceleration) {
         this.mass = mass;
         this.velocity = velocity;
         this.acceleration = acceleration;
     }
 
 
-    public PhysicalObeject(double mass) {
+    public PhysicalObject(double mass) {
         this.mass = mass;
         this.velocity = 0;
         this.acceleration = 0;
